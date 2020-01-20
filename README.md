@@ -1,5 +1,7 @@
 # Kancolle-bot
 ---
+![LICENSE](https://img.shields.io/github/license/a123453906/Kancolle-bot)
+
 This project is to make the DMM game "Kancolle" easier to play.
 
 Build with Eclipse with [e(fx)clipse](http://download.eclipse.org/efxclipse/updates-nightly/site).
