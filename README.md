@@ -2,6 +2,8 @@
 ---
 This project is to make the DMM game "Kancolle" easier to play.
 
+![Preview](https://i.imgur.com/NNhDug9.png)
+
 ## Festures
 ---
 * The Game can run in background(you can do another things when bot is clicking)
