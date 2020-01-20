@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <CommunicationClass name="application.Checkminimized" x="424" y="371">
+        <Communication destinationClassName="application.Checkminimized.User32"/>
+    </CommunicationClass>
+    <CommunicationClass name="application.CursorGetHandle.User32Ex"
+        x="700" y="436">
+        <Association
+            destinationClassName="application.CursorGetHandle.User32Ex"
+            endpointName="instance" kind="Simple"/>
+    </CommunicationClass>
+    <CommunicationClass name="application.UIController" x="512" y="34">
+        <Communication destinationClassName="application.Checkminimized"/>
+        <Communication destinationClassName="application.PostMessage"/>
+        <Communication destinationClassName="application.CursorGetHandle"/>
+        <Communication destinationClassName="application.GetWindowRect"/>
+        <Communication destinationClassName="application.CaptureByHandle"/>
+    </CommunicationClass>
+    <CommunicationClass name="application.CaptureByHandle.User32Extra"
+        x="157" y="263">
+        <Association
+            destinationClassName="application.CaptureByHandle.User32Extra"
+            endpointName="INSTANCE" kind="Simple"/>
+    </CommunicationClass>
+    <CommunicationClass name="application.CaptureByHandle" x="205" y="122">
+        <Communication destinationClassName="application.CaptureByHandle.User32Extra"/>
+        <Communication destinationClassName="application.CaptureByHandle.GDI32Extra"/>
+    </CommunicationClass>
+    <CommunicationClass name="application.GetWindowRect" x="924" y="268">
+        <Communication destinationClassName="application.GetWindowRect.User32"/>
+    </CommunicationClass>
+    <CommunicationClass name="application.GetWindowRect.User32" x="937" y="495">
+        <Association
+            destinationClassName="application.GetWindowRect.User32"
+            endpointName="INSTANCE" kind="Simple"/>
+    </CommunicationClass>
+    <CommunicationClass name="application.Checkminimized.User32" x="447" y="522">
+        <Association
+            destinationClassName="application.Checkminimized.User32"
+            endpointName="INSTANCE" kind="Simple"/>
+    </CommunicationClass>
+    <CommunicationClass name="application.Main" x="643" y="23"/>
+    <CommunicationClass name="application.PostMessage.User32" x="202" y="596">
+        <Association
+            destinationClassName="application.PostMessage.User32"
+            endpointName="INSTANCE" kind="Simple"/>
+    </CommunicationClass>
+    <CommunicationClass name="application.PostMessage" x="235" y="406">
+        <Communication destinationClassName="application.PostMessage.User32"/>
+    </CommunicationClass>
+    <CommunicationClass name="application.CursorGetHandle" x="568" y="220">
+        <Communication destinationClassName="application.CursorGetHandle.User32Ex"/>
+    </CommunicationClass>
+    <CommunicationClass name="application.CaptureByHandle.WinGDIExtra"
+        x="86" y="87"/>
+    <CommunicationClass name="application.CaptureByHandle.GDI32Extra"
+        x="22" y="187">
+        <Association
+            destinationClassName="application.CaptureByHandle.GDI32Extra"
+            endpointName="INSTANCE" kind="Simple"/>
+    </CommunicationClass>
+</ClassDiagram>

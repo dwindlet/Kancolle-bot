@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.shape.Rectangle?>
+<?import java.util.ArrayList?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="${(215.0/12) * dpirect.width}" prefWidth="${(575.0/12) * dpirect.height}" side="BOTTOM" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UIController">
+<fx:define>
+  <Rectangle fx:id="dpirect" height="12" width="12" />
+</fx:define>
+   <tabs>
+      <Tab closable="false" text="Expedition">
+         <content>
+            <GridPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="${(150.0/12) * dpirect.height}" prefWidth="${(575.0/12) * dpirect.height}">
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints minWidth="${(70.0/15) * dpirect.height}" />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="${(30.0/15) * dpirect.width}" />
+                  <RowConstraints minHeight="${(40.0/15) * dpirect.width}" />
+                  <RowConstraints minHeight="${(40.0/15) * dpirect.width}" />
+                  <RowConstraints minHeight="${(40.0/15) * dpirect.width}" />
+                  <RowConstraints minHeight="${(30.0/15) * dpirect.width}" />
+               </rowConstraints>
+               <children>
+                  <CheckBox fx:id="fleet2" mnemonicParsing="false" selected="true" text="Fleet 2" GridPane.rowIndex="1" />
+                  <CheckBox fx:id="fleet3" mnemonicParsing="false" selected="true" text="Fleet 3" GridPane.rowIndex="2" />
+                  <CheckBox fx:id="fleet4" mnemonicParsing="false" selected="true" text="Fleet 4" GridPane.rowIndex="3" />
+                  <Label text="EXP Time" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.halignment="CENTER" />
+                  <ComboBox fx:id="hourone" editable="true" maxWidth="${(70.0/15) * dpirect.height}" value="0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <ComboBox fx:id="hourtwo" editable="true" maxWidth="${(70.0/15) * dpirect.height}" value="0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <ComboBox fx:id="hourthree" editable="true" maxWidth="${(70.0/15) * dpirect.height}" value="0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <ComboBox fx:id="minuteone" editable="true" maxWidth="${(70.0/15) * dpirect.height}" value="0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <ComboBox fx:id="minutetwo" editable="true" maxWidth="${(70.0/15) * dpirect.height}" value="0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <ComboBox fx:id="minutethree" editable="true" maxWidth="${(70.0/15) * dpirect.height}" value="0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <ComboBox fx:id="secondone" editable="true" maxWidth="${(70.0/15) * dpirect.height}" value="0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <ComboBox fx:id="secondtwo" editable="true" maxWidth="${(70.0/15) * dpirect.height}" value="0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <ComboBox fx:id="secondthree" editable="true" maxWidth="${(70.0/15) * dpirect.height}" value="0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                  <ComboBox fx:id="statusone" value="expeditioning" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                  <ComboBox fx:id="statustwo" value="expeditioning" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                  <ComboBox fx:id="statusthree" value="expeditioning" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                  <ComboBox fx:id="numone" editable="true" maxWidth="${(70.0/15) * dpirect.height}" value="2" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <ComboBox fx:id="numtwo" editable="true" maxWidth="${(70.0/15) * dpirect.height}" value="38" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                  <ComboBox fx:id="numthree" editable="true" maxWidth="${(70.0/15) * dpirect.height}" value="37" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                  <Label fx:id="countone" text="0" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Label>
+                  <Label fx:id="counttwo" text="0" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Label>
+                  <Label fx:id="countthree" text="0" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                  <Button fx:id="startone" mnemonicParsing="false" onAction="#startone" text="Start" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Button fx:id="starttwo" mnemonicParsing="false" onAction="#starttwo" text="Start" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                  <Button fx:id="startthree" mnemonicParsing="false" onAction="#startthree" text="Start" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                  <Button fx:id="stopone" mnemonicParsing="false" onAction="#stopone" text="Stop" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Button fx:id="stoptwo" mnemonicParsing="false" onAction="#stoptwo" text="Stop" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                  <Button fx:id="stopthree" mnemonicParsing="false" onAction="#stopthree" text="Stop" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                  <Label text="Expedition Status" GridPane.columnIndex="4" GridPane.halignment="CENTER" />
+                  <Label text="Num" GridPane.columnIndex="5" GridPane.halignment="CENTER" />
+                  <Label text="Count" GridPane.columnIndex="6" GridPane.halignment="CENTER" />
+                  <Label text="Status:" GridPane.columnIndex="7" GridPane.halignment="CENTER" />
+                  <Label text="Handle:" GridPane.rowIndex="4" />
+                  <Button fx:id="startall" mnemonicParsing="false" onAction="#startall" text="Start All" GridPane.columnIndex="6" GridPane.columnSpan="2" GridPane.halignment="LEFT" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets left="3.0" />
+                     </GridPane.margin></Button>
+                  <Button fx:id="stopall" mnemonicParsing="false" onAction="#stopall" text="Stop/EMER" GridPane.columnIndex="7" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets left="8.0" />
+                     </GridPane.margin></Button>
+                  <Label fx:id="handlelabel" text="Waiting" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Button fx:id="handleset" mnemonicParsing="false" onMouseDragged="#setHandle" text="Find Area" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets right="20.0" />
+                     </GridPane.margin></Button>
+                  <Label fx:id="workingstatus" text="idle" textFill="#009a00" GridPane.columnIndex="8" GridPane.halignment="CENTER" />
+                  <Button mnemonicParsing="false" onMouseDragged="#setAssistHandle" text="Assistance program" GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.halignment="LEFT" GridPane.rowIndex="4" />
+                  <Label fx:id="assisthandle" text="(no assist)" GridPane.halignment="CENTER" />
+                  <!--<Button fx:id="runtest" mnemonicParsing="false" onAction="#automaticplay" text="Google" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets left="52.0" />
+                     </GridPane.margin></Button>-->
+               </children>
+               <fx:define>
+       			 <ArrayList fx:id="SelectedComboBoxList">
+            		<fx:reference source="hourone" />
+            		<fx:reference source="hourtwo" />
+            		<fx:reference source="hourthree" />
+            		<fx:reference source="minuteone" />
+            		<fx:reference source="minutetwo" />
+            		<fx:reference source="minutethree" />
+            		<fx:reference source="secondone" />
+            		<fx:reference source="secondtwo" />
+            		<fx:reference source="secondthree" />
+            		<fx:reference source="numone" />
+            		<fx:reference source="numtwo" />
+            		<fx:reference source="numthree" />
+        		 </ArrayList>
+    			</fx:define>
+            </GridPane>
+         </content>
+      </Tab>
+      <Tab closable="false" text="Quest">
+        <content>
+        <GridPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="${(150.0/12) * dpirect.height}" prefWidth="${(575.0/12) * dpirect.height}">
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints maxWidth="${(70.0/15) * dpirect.width}" />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="${(30.0/15) * dpirect.width}" />
+                  <RowConstraints minHeight="${(30.0/15) * dpirect.width}" />
+                  <RowConstraints minHeight="${(30.0/15) * dpirect.width}" />
+                  <RowConstraints minHeight="${(30.0/15) * dpirect.width}" />
+                  <RowConstraints minHeight="${(30.0/15) * dpirect.width}" />
+                  <RowConstraints minHeight="${(30.0/15) * dpirect.width}" />
+               </rowConstraints>
+               <children>
+                  <CheckBox fx:id="exp3rounds" mnemonicParsing="false" text="Exp 3 rounds quest automatic accept" GridPane.rowIndex="0" />
+                  <CheckBox fx:id="exp10rounds" mnemonicParsing="false" text="Exp 10 rounds quest automatic accept" GridPane.rowIndex="1" />
+                  <CheckBox fx:id="exp30rounds" mnemonicParsing="false" text="Exp 30 rounds quest automatic accept" GridPane.rowIndex="2" />
+                  <CheckBox fx:id="exptokyotrip1rounds" mnemonicParsing="false" text="Exp no.37,38 1 round quest automatic accept" GridPane.rowIndex="3" />
+                  <CheckBox fx:id="exptokyotrip7rounds" mnemonicParsing="false" text="Exp no.37,38 7 rounds quest automatic accept" GridPane.rowIndex="4" />
+                  <TextField fx:id="exp3progress" text="0" GridPane.columnIndex="1" />
+                  <TextField fx:id="exp10progress" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="exp30progress" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="exptokyo1progress" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="exptokyo7progress" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <CheckBox fx:id="exp3roundsaccept" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.rowIndex="0" text="mission accept status" />
+                  <CheckBox fx:id="exp10roundsaccept" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.rowIndex="1" text="mission accept status" />
+                  <CheckBox fx:id="exp30roundsaccept" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.rowIndex="2" text="mission accept status" />
+                  <CheckBox fx:id="exptokyotrip1roundsaccept" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.rowIndex="3" text="mission accept status" />
+                  <CheckBox fx:id="exptokyotrip7roundsaccept" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.rowIndex="4" text="mission accept status" />
+                  <!--Button fx:id="test" disable="false" mnemonicParsing="false" onAction="#automaticplay" text="Button" visible="true" GridPane.columnIndex="1" GridPane.rowIndex="5" /-->
+                  
+               </children>
+               <fx:define>
+       			 <ArrayList fx:id="QuestCheckBoxList">
+            		<fx:reference source="exp3rounds" />
+            		<fx:reference source="exp10rounds" />
+            		<fx:reference source="exp30rounds" />
+            		<fx:reference source="exptokyotrip1rounds" />
+            		<fx:reference source="exptokyotrip7rounds" />
+        		 </ArrayList>
+        		 <ArrayList fx:id="QuestProgressList">
+            		<fx:reference source="exp3progress" />
+            		<fx:reference source="exp10progress" />
+            		<fx:reference source="exp30progress" />
+            		<fx:reference source="exptokyo1progress" />
+            		<fx:reference source="exptokyo7progress" />
+        		 </ArrayList>
+        		 <ArrayList fx:id="QuestAcceptList">
+            		<fx:reference source="exp3roundsaccept" />
+            		<fx:reference source="exp10roundsaccept" />
+            		<fx:reference source="exp30roundsaccept" />
+            		<fx:reference source="exptokyotrip1roundsaccept" />
+            		<fx:reference source="exptokyotrip7roundsaccept" />
+        		 </ArrayList>
+    			</fx:define>
+            </GridPane>
+        </content>
+      </Tab>
+      <Tab closable="false" text="Setting">
+         <content>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="${(210.0/12) * dpirect.height}" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="${(48.0/12) * dpirect.height}" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="${(210.0/12) * dpirect.height}" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="${(48.0/12) * dpirect.height}" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints prefHeight="${(35.0/12) * dpirect.height}" vgrow="SOMETIMES" />
+                <RowConstraints prefHeight="${(35.0/12) * dpirect.height}" vgrow="SOMETIMES" />
+                <RowConstraints prefHeight="${(35.0/12) * dpirect.height}" vgrow="SOMETIMES" />
+                <RowConstraints prefHeight="${(35.0/12) * dpirect.height}" vgrow="SOMETIMES" />
+                <RowConstraints prefHeight="${(35.0/12) * dpirect.height}" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="CENTER_RIGHT" text="Click Offset Time(s) (FIXED)(Double)" GridPane.halignment="RIGHT" />
+                  <TextField fx:id="clickoffsetfield" prefWidth="78.0" GridPane.columnIndex="1" />
+                  <Label alignment="CENTER_RIGHT" text="Exp Offset Time(s) (FIXED)(Integer)" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                  <TextField fx:id="expoffsetfield" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Button fx:id="updatesetting" mnemonicParsing="false" onAction="#updatesetting" text="Generate/Update Setting File" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+                  <TextField fx:id="clickoffsetrand" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="expoffsetrand" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label alignment="CENTER_RIGHT" text="and random upperbound(s) (Double)" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+                  <Label alignment="CENTER_RIGHT" text="and random(s)(Integer)" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+                  <Label text="Wait For Target Timeout:(double)" GridPane.columnIndex="2" GridPane.halignment="RIGHT" />
+                  <TextField fx:id="waitfortargett" GridPane.columnIndex="3" />
+                  <CheckBox fx:id="refreshpagecheck" mnemonicParsing="false" text="refresh page when cat bomb" GridPane.columnIndex="2" GridPane.rowIndex="4" GridPane.halignment="RIGHT" />
+                  <CheckBox fx:id="notifysoundcheck" mnemonicParsing="false" text="notify sound for exp time up?" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+                  <TextField fx:id="notifytimefield" disable="true" maxWidth="${(80.0/12) * dpirect.height}" promptText="(Integer)" text="30" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                  <Label fx:id="notifytimelabel" disable="true" text="When?(Left time)" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets right="55.0" />
+                     </GridPane.margin>
+                  </Label>
+                  
+               </children>
+               <fx:define>
+       			 <ArrayList fx:id="SettingTextFieldList">
+            		<fx:reference source="clickoffsetfield" />
+            		<fx:reference source="expoffsetfield" />
+            		<fx:reference source="clickoffsetrand" />
+            		<fx:reference source="expoffsetrand" />
+            		<fx:reference source="waitfortargett" />
+            		<fx:reference source="notifytimefield" />
+        		 </ArrayList>
+    			</fx:define>
+            </GridPane>
+         </content>
+      </Tab>
+      <Tab closable="false" text="Log">
+         <content>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="${(190.0/12) * dpirect.width}" prefWidth="${(575.0/12) * dpirect.height}">
+               <children>
+                  <TextArea fx:id="logarea" editable="false" maxHeight="${(190.0/12) * dpirect.height}" maxWidth="${(463.0/12) * dpirect.height}" />
+                  <CheckBox fx:id="savelog" layoutX="467.0" layoutY="6.0" mnemonicParsing="false" text="Save log to file" translateX="${38.9 * (dpirect.height-12)}" />
+                  <Button fx:id="clearlog" layoutX="502.0" layoutY="122.0" mnemonicParsing="false" onAction="#clearlog" text="Clear log" translateX="${38.9 * (dpirect.height-12)}" translateY="${10.1 * (dpirect.height-12)}" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab closable="false" text="Help">
+        <content>
+          <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="${(180.0/12) * dpirect.width}" prefWidth="${(575.0/12) * dpirect.height}">
+               <children>
+                  <Label layoutX="9.0" layoutY="3.0" text="Simple Description" />
+                  <Label layoutX="7.0" layoutY="22.0" text="1. Before use, drag the &quot;Find Area&quot; button on Kancolle game area and release. to find handle first. " />
+                  <Label layoutX="7.0" layoutY="39.0" text="2. If you use the assistance program(e.g. 七四式電子観測儀(ElectronicObserver) , KanColleViewer(KCV)" />
+                  <Label layoutX="9.0" layoutY="56.0" text=",common Browsers are not support now), drag the &quot;Assistance Program&quot; on its                .(Because the " />
+                  <Label layoutX="7.0" layoutY="74.0" text="bot can't work when GameScreen is minimized." textFill="RED" />
+                  <Label layoutX="273.0" layoutY="74.0" text=" This can help you auto maximized the window." translateX="${20 * (dpirect.height-12)}" />
+                  <Label layoutX="7.0" layoutY="91.0" text="3. Try to avoid mouse hover or move on the Kancolle game screen when bot is" />
+                  <Label layoutX="447.0" layoutY="91.0" text="&quot;Working&quot;" textFill="RED" translateX="${36 * (dpirect.height-12)}" />
+                  <Label layoutX="510.0" layoutY="91.0" text="sometimes" translateX="${40 * (dpirect.height-12)}" />
+                  <Label layoutX="7.0" layoutY="108.0" text="could cause bot make wrong click." />
+                  <Label layoutX="452.0" layoutY="56.0" text="title bar" textFill="RED" translateX="${37 * (dpirect.height-12)}" />
+                  <Label layoutX="7.0" layoutY="129.0" text="4. Be low-key to use. Over using may risky. At last, have fun!" />
+                  <ImageView fx:id="titleimg" fitHeight="23.0" fitWidth="320.0" layoutX="250.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true" translateX="${38.9 * (dpirect.height-12)}" />
+                  <Label layoutX="437.0" layoutY="132.0" text="↑title bar area like this" translateX="${38.9 * (dpirect.height-12)}" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab closable="false" text="About">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="9.0" layoutY="7.0" text="Kancolle Bot by Akitsuki Yamato">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="28.0" text="Version: 1.0.3" />
+                  <Label layoutX="14.0" layoutY="53.0" text="Recent updated log:" />
+                  <Label layoutX="20.0" layoutY="68.0" text="2017/9/7 v1.0.0.8 ADD: quest count function." />
+                  <Label layoutX="20.0" layoutY="84.0" text="2017/10/19 v1.0.0.9 FIX: officail expeditioning UI updated react" />
+                  <Label layoutX="20.0" layoutY="100.0" text="2018/1/1 v1.0.0.10 FIX: after new year mission function bug." />
+                  <Label layoutX="20.0" layoutY="116.0" text="2018/10/18 v1.0.1 FIX: 2nd Sequence(HTML5) game version corresponding." />
+                  <Label layoutX="20.0" layoutY="132.0" text="2019/12/13 v1.0.2 FIX: expedition update." />
+                  <Label layoutX="20.0" layoutY="148.0" text="                  FIX: change BitBlt to PrintWindow method." />
+                  <Label layoutX="20.0" layoutY="164.0" text="2020/1/19 v1.0.3 ADD: refresh page when cat bomb function." />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+   </tabs>
+</TabPane>
