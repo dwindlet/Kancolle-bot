@@ -6,6 +6,8 @@ This project is to make the DMM game "Kancolle" easier to play.
 
 Build with Eclipse with [e(fx)clipse](http://download.eclipse.org/efxclipse/updates-nightly/site).
 
+Sorry for the messy code. I will add code comment later to make it more readable.
+
 ![Preview](https://i.imgur.com/NNhDug9.png)
 
 ## Festures
@@ -14,15 +16,16 @@ Build with Eclipse with [e(fx)clipse](http://download.eclipse.org/efxclipse/upda
 * Automatically set off for expeditions.
 * Automatically accept expedition missions and clear it.
 * Automatically Refresh the mission stat when change day or week.
-* Refresh game page when encounter a cat bomb(Working only in 七四式電子観測儀)
+* Refresh game page when encounter a cat bomb(Working only in [七四式電子観測儀](http://electronicobserver.blog.fc2.com/))
 * Configurable random clicking point offset and delay time.
 * Action Log
+* More infos are in program's "Help" tab
 
 ## Using
 ---
 * Require java 1.8.0_102 installed
 * Download Kancolle.jar from [Release](https://github.com/a123453906/Kancolle-bot/releases)
-* Run it with "javaw -jar Kancolle.jar"
+* Run it with "javaw -jar Kancolle.jar" or double click on jar
 
 ## Troubleshoot
 ---
