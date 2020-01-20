@@ -2,6 +2,8 @@
 ---
 This project is to make the DMM game "Kancolle" easier to play.
 
+Build with Eclipse with [e(fx)clipse](http://download.eclipse.org/efxclipse/updates-nightly/site).
+
 ![Preview](https://i.imgur.com/NNhDug9.png)
 
 ## Festures
@@ -17,12 +19,18 @@ This project is to make the DMM game "Kancolle" easier to play.
 ## Using
 ---
 * Require java 1.8.0_102 installed
-* Download Kancolle.jar from [Release]()
+* Download Kancolle.jar from [Release](https://github.com/a123453906/Kancolle-bot/releases)
 * Run it with "javaw -jar Kancolle.jar"
 
 ## Troubleshoot
 ---
 delete all ini files in the same path and retry.
+
+## Dependent
+---
+[SikuliX by RaiMan](http://sikulix.com/)
+
+[JNA 4.4](https://github.com/java-native-access/jna)
 
 ## Change Log
 ---
