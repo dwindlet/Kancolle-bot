@@ -18,7 +18,7 @@ public class Main extends Application {
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.setResizable(false);
-			primaryStage.setTitle("Bot v1.0.3");
+			primaryStage.setTitle("Bot v1.0.4");
 			primaryStage.show();
 		} catch(Exception e) {
 			e.printStackTrace();

@@ -39,6 +39,9 @@ delete all ini files in the same path and retry.
 
 ## Change Log
 ---
+#### 2020/2/1 v1.0.4 
+* FIX: choose expedition page wrong logic.
+* DEL: check expedition return when set off expedition and back to HeadQuarter.
 #### 2020/1/19 v1.0.3 
 * ADD: refresh page when cat bomb function.
 #### 2019/12/13 v1.0.2 
