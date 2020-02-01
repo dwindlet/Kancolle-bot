@@ -2496,7 +2496,7 @@ public class UIController{
 				}
 				page = 1;
 			}
-			else {
+			if(page == 1) {
 				do {
 					page = 10;
 					interrupted = clickactCoordinate("expnext",0,-(sr.nextInt(5)+1),-186,-85);
@@ -2515,7 +2515,7 @@ public class UIController{
 				}
 				page = 2;
 			}
-			else {
+			if(page == 2) {
 				do {
 					page = 11;
 					interrupted = clickactCoordinate("expnext",0,-(sr.nextInt(5)+1),-186,-85);
@@ -4507,25 +4507,25 @@ public class UIController{
 				if(interrupted == 1){
 					statrunning = 0; return;
 				}
-				do{
-					if(findexists("expeditionreturn",2)){
-						interrupted = clickact("expeditionreturn",-(sr.nextInt(400)+1),sr.nextInt(350)+1);
-						if(interrupted == 1){
-							statrunning = 0; return;
-						}
-						
-						interrupted = clickact("next",-(sr.nextInt(600)+1),-(sr.nextInt(350)+1));
-						if(interrupted == 1){
-							statrunning = 0; return;
-						}
-						wait(clickoffsettime);
-						PostMessage.clickbypostmessage(hwndclick,sr.nextInt(600)+1 ,sr.nextInt(350)+1);
-						/**interrupted = clickact("next",-(sr.nextInt(600)+1),-(sr.nextInt(350)+1));
-						if(interrupted == 1){
-							statrunning = 0; return;
-						}*/
-					}
-				}while(findexists("expeditionreturn",2));
+//				do{
+//					if(findexists("expeditionreturn",2)){
+//						interrupted = clickact("expeditionreturn",-(sr.nextInt(400)+1),sr.nextInt(350)+1);
+//						if(interrupted == 1){
+//							statrunning = 0; return;
+//						}
+//						
+//						interrupted = clickact("next",-(sr.nextInt(600)+1),-(sr.nextInt(350)+1));
+//						if(interrupted == 1){
+//							statrunning = 0; return;
+//						}
+//						wait(clickoffsettime);
+//						PostMessage.clickbypostmessage(hwndclick,sr.nextInt(600)+1 ,sr.nextInt(350)+1);
+//						/**interrupted = clickact("next",-(sr.nextInt(600)+1),-(sr.nextInt(350)+1));
+//						if(interrupted == 1){
+//							statrunning = 0; return;
+//						}*/
+//					}
+//				}while(findexists("expeditionreturn",2));
 				
 				do{
 					if(findexists("sorties",10)){
@@ -4971,6 +4971,25 @@ public class UIController{
 						stopthree(null);
 						
 					}
+					if((fleet2startstatus == 2 && startone.isDisabled() == true)
+						|| (fleet3startstatus == 2 && starttwo.isDisabled() == true)
+						|| (fleet4startstatus == 2 && startthree.isDisabled() == true)) {
+						
+					}else {
+						statrunning = 0; 
+						Platform.runLater(new Runnable() {                          
+							@Override
+							public void run() {
+								try{
+									workingstatus.setText("idle");
+									workingstatus.setTextFill(Color.web("#009a00"));
+									}finally{
+									}
+							}
+						});
+						return;
+					}
+					
 					
 					if(startone.isDisabled() == true || starttwo.isDisabled() == true || startthree.isDisabled() == true) {
 		
@@ -5323,25 +5342,25 @@ public class UIController{
 						if(interrupted == 1){
 							statrunning = 0; return;
 						}
-						do{
-							if(findexists("expeditionreturn",2)){
-								interrupted = clickact("expeditionreturn",-(sr.nextInt(400)+1),sr.nextInt(350)+1);
-								if(interrupted == 1){
-									statrunning = 0; return;
-								}
-								
-								interrupted = clickact("next",-(sr.nextInt(600)+1),-(sr.nextInt(350)+1));
-								if(interrupted == 1){
-									statrunning = 0; return;
-								}
-								wait(clickoffsettime);
-								PostMessage.clickbypostmessage(hwndclick,sr.nextInt(600)+1 ,sr.nextInt(350)+1);
-								/**interrupted = clickact("next",-(sr.nextInt(600)+1),-(sr.nextInt(350)+1));
-								if(interrupted == 1){
-									statrunning = 0; return;
-								}*/
-							}
-						}while(findexists("expeditionreturn",2));
+//						do{
+//							if(findexists("expeditionreturn",2)){
+//								interrupted = clickact("expeditionreturn",-(sr.nextInt(400)+1),sr.nextInt(350)+1);
+//								if(interrupted == 1){
+//									statrunning = 0; return;
+//								}
+//								
+//								interrupted = clickact("next",-(sr.nextInt(600)+1),-(sr.nextInt(350)+1));
+//								if(interrupted == 1){
+//									statrunning = 0; return;
+//								}
+//								wait(clickoffsettime);
+//								PostMessage.clickbypostmessage(hwndclick,sr.nextInt(600)+1 ,sr.nextInt(350)+1);
+//								/**interrupted = clickact("next",-(sr.nextInt(600)+1),-(sr.nextInt(350)+1));
+//								if(interrupted == 1){
+//									statrunning = 0; return;
+//								}*/
+//							}
+//						}while(findexists("expeditionreturn",2));
 						do{
 							if(findexists("sorties",10)){
 								break;
